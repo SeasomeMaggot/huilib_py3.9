@@ -1,7 +1,11 @@
+#import sys
+#sys.path.insert(1, '/path/to/huilib')
+
 import hou
 from random import random
 import huilib
-reload(huilib)
+import imp
+imp.reload(huilib)
 
 
 class TestDialog(huilib.HDialog):
@@ -142,6 +146,6 @@ class TestDialog(huilib.HDialog):
         print clr
 
 
-if __name__ == '__main__':
-    ui = TestDialog(name = 'test', title = 'Test UI')
-    ui.show()
+
+ui = TestDialog(name = 'test', title = 'Test UI')
+ui.show()
