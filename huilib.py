@@ -553,7 +553,7 @@ class HBaseWindow(object):
             self.dialog = hou.ui.createDialog(tmp_f)
             self.dialog.name = self.name
         except hou.OperationFailed as e:
-            print "{a:#^50}\n{ui_str}\n{a:#^50}".format(error = e, ui_str = self.ui_str, a = '#')
+            print ("{a:#^50}\n{ui_str}\n{a:#^50}".format(error = e, ui_str = self.ui_str, a = '#'))
             raise e
         finally:
             from os import remove
@@ -593,7 +593,7 @@ class HBaseWindow(object):
     def _print(self):
         if not self.ui_str:
             self._make_ui_string()
-        print self.ui_str
+        print (self.ui_str)
 
 
 class HDialog(HBaseWindow):
