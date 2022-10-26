@@ -3,8 +3,8 @@ import tempfile
 import types
 import collections
 
-def _attributes_to_string(obj, atrr_dict):
-    for k, v in atrr_dict.iteritems():
+def _attributes_to_string(obj, attr_dict):
+    for k, v in attr_dict.items():
         if isinstance(v, bool) and v == True or v == None:
             obj.attributes_string += '%s '% k.upper()
         elif v == False:
