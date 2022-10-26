@@ -83,7 +83,7 @@ class HBaseGadget(object):
         spacing = unit
         spacing = [h,v]
         justify = [h,v]
-        look = "plain", "line", "groove", "bevel", "beveldown"
+        look = 'plain', 'line', 'groove', 'bevel', 'beveldown'
         rmbmenu = menuref
 
                 """
